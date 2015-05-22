@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "part4";
+}
+
+<h2>part4</h2>
+
+<div ng-controller="Part4Controller">
+    Country : <select ng-model="CountryId" ng-options="I.CountryId as I.CountrName for I in CountryList" ng-change="GetState()">
+    <option value="">Select Country</option>
+</select>
+    State : <select ng-model="StateId" ng-options="I.StateId as I.StateName for I in StateList">
+    <option>{{StateTextToShow}}</option>
+    </select>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/AngularController/Part4Controller.js"></script>
+}
