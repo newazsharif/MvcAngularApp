@@ -26,5 +26,15 @@ namespace MvcAngularApp.Controllers
             return View();
         }
 
+        public ActionResult Part3()
+        {
+            return View();
+        }
+
+        public ActionResult Part9()
+        {
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Part3";
+}
+
+<h2>Part3</h2>
+<div ng-controller="Part3Controller">
+    <form  name="f1" ng-submit="SaveData(Student)">
+        <table>
+            <tr>
+                <td>Name : </td>
+                <td>
+                    <input type="text" ng-model="Student.StudentName" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Roll : </td>
+                <td>
+                    <input type="text" ng-model="Student.StudentRoll" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td>
+                    <input type="text" ng-model="Student.StudentAddress" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+@section scripts
+{
+    <script src="~/Scripts/AngularController/Part3Controller.js"></script>
+}

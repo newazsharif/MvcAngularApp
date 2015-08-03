@@ -159,6 +159,9 @@
     <Compile Include="State.cs">
       <DependentUpon>MyDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>MyDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>MyDatabase.tt</DependentUpon>
     </Compile>
@@ -245,7 +248,9 @@
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\AngularController\Part2Controller.js" />
+    <Content Include="Scripts\AngularController\Part3Controller.js" />
     <Content Include="Scripts\AngularController\Part4Controller.js" />
+    <Content Include="Scripts\AngularController\Route.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -262,6 +267,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\MyApp.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Templates\About.html" />
+    <Content Include="Templates\Error.html" />
+    <Content Include="Templates\Home.html" />
+    <Content Include="Templates\Order.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -276,6 +285,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Part2.cshtml" />
     <Content Include="Views\Home\part4.cshtml" />
+    <Content Include="Views\Home\Part3.cshtml" />
+    <Content Include="Views\Home\Part9.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

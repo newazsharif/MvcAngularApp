@@ -36,6 +36,15 @@ warning 6002: The table/view 'D:\PROJECT\C#\MVCANGULARAPP\MVCANGULARAPP\APP_DATA
           <Property Name="StateName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CountryId" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="StudentRoll" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentAddress" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
@@ -48,6 +57,7 @@ warning 6002: The table/view 'D:\PROJECT\C#\MVCANGULARAPP\MVCANGULARAPP\APP_DATA
         <EntityContainer Name="MyDatabaseModelStoreContainer">
           <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -84,6 +94,7 @@ FROM [dbo].[Contact] AS [Contact]</DefiningQuery>
           <EntitySet Name="User" EntityType="MyDatabaseModel.User" />
           <EntitySet Name="Country" EntityType="MyDatabaseModel.Country" />
           <EntitySet Name="State" EntityType="MyDatabaseModel.State" />
+          <EntitySet Name="Student" EntityType="MyDatabaseModel.Student" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -108,6 +119,15 @@ FROM [dbo].[Contact] AS [Contact]</DefiningQuery>
           <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CountryId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="StudentRoll" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="StudentAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -152,6 +172,16 @@ FROM [dbo].[Contact] AS [Contact]</DefiningQuery>
                 <ScalarProperty Name="CountryId" ColumnName="CountryId" />
                 <ScalarProperty Name="StateName" ColumnName="StateName" />
                 <ScalarProperty Name="StateId" ColumnName="StateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student">
+            <EntityTypeMapping TypeName="MyDatabaseModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="StudentAddress" ColumnName="StudentAddress" />
+                <ScalarProperty Name="StudentRoll" ColumnName="StudentRoll" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

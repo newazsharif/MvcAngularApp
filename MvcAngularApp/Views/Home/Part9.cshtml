@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Part9";
+}
+
+<h2>Angular Routing</h2>
+<div>
+    <ul class="menu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Order/500">Order</a></li>
+        <li><a href="#Error">Error</a></li>
+    </ul>
+</div>
+<div style="padding : 0 10px ;margin : 10px ; border:10px">
+    <ng-view>
+
+    </ng-view>
+
+</div>
+@section Scripts
+{
+    <script src="../Scripts/AngularController/Route.js"></script>
+}

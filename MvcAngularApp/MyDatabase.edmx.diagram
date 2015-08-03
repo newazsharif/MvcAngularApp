@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="MyDatabaseModel.User" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="MyDatabaseModel.Country" Width="1.5" PointX="3.375" PointY="2.75" />
         <EntityTypeShape EntityType="MyDatabaseModel.State" Width="1.5" PointX="5.125" PointY="0.875" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Student" Width="1.5" PointX="5.375" PointY="2.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

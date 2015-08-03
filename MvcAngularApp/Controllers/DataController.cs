@@ -56,5 +56,27 @@ namespace MvcAngularApp.Controllers
             return new JsonResult { Data = States, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
+       public JsonResult Create(Student aStudent)
+        {
+            var message = "";
+           using(MyDatabaseEntities dc = new MyDatabaseEntities())
+           {
+               if (ModelState.IsValid)
+               {
+                   dc.Student.Add(aStudent);
+                   dc.SaveChanges();
+                   message =  "Data Saved Successfully";
+                   
+               }
+               else
+               {
+                   message = "Error Occured!!";
+               }
+
+               return new JsonResult{ Data = message,JsonRequestBehavior= JsonRequestBehavior.AllowGet};
+                   
+           }
+        }
+
     }
 }
